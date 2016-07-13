@@ -1,0 +1,36 @@
+<div class="col-lg-6 col-lg-offset-3" align="center">
+            <h3 style="margin-left:15px;"><strong>DOWNLOAD PESERTA KULIAH</strong></h3>
+            <div ng-repeat="sem in user | limitTo:quantity" style="margin-left:15px;">
+                <h5>Semester {{sem.semester}} Tahun {{sem.tahun}}</h5>
+            </div>
+        </div>
+        <table class="table table-hover panel panel-primary" style="margin-left:15px;">
+            <thead class="panel-heading">
+            <tr class="header-table panel-title">
+                <th>No</th>
+                <th>Kode</th>
+                <th>Mata Kuliah</th>
+                <th>Kelas</th>
+                <th>Download</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="d in daftar | orderBy:'semester' track by $index">
+                    <td align="center">{{$index+1}}</td>
+                    <td>{{d.kode_mk}}</td>
+                    <td>{{d.nama_mk}}</td>
+                    <td align="center">{{d.kelas}}</td>
+                    <td align="center">
+                        <a href="" onClick ="$('#tabnilai').tableExport({type:'excel',escape:'false'});">
+                            <button type="button" class="btn btn-primary">
+                                Download
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+<div class="col-md-1 col-md-offset-11">
+    </div>
+
+    

@@ -1,0 +1,124 @@
+<!-- HEADER AWAL -->
+	<div class="page-header" style="margin-top:0px;">
+		<h1 align="center" data-toggle="tooltip" data-placement="right" title="Aplikasi Nilai UMS">
+            Administrasi Nilai
+            <img src="image/logoums.png" style="height:35px;width:35px;">
+            <font color="yellow" size="6">Universitas Muhammadiyah Surakarta</font>
+        </h1> 
+        <hr style="border-width:3px;border-color:yellow;margin-bottom:0;margin-top:30px;">
+	</div>
+<!-- HEADER AKHIR -->
+
+	<div class="container">
+
+	<!-- BAGIAN KIRI AWAL-->
+        
+	<div class="col-md-3" style="padding-top:30px;">
+        <ul class="nav nav-pills nav-stacked">
+		<li>
+            <a href="#/home" ng-click="tutorialn=true;downloadn=false;uploadn=false;cekn=false;ubahpassword=false" data-toggle="tooltip" data-placement="right" title="Download" style="color: #428bca;">
+                TUTORIAL APLIKASI
+            </a>
+        </li>
+        <!--<li>
+            <a href="" ng-click="downloadn=true;uploadn=false;cekn=false;ubahpassword=false;tutorialn=false" data-toggle="tooltip" data-placement="right" title="Download" style="color: #428bca;">
+                DOWNLOAD PESERTA
+            </a>
+        </li>-->
+        <li>
+            <a href="" ng-click="cekn=true;ubahpassword=false;downloadn=false;uploadn=false;tutorialn=false" 
+            data-toggle="tooltip" data-placement="right" ng-model="pagesize"
+            title="Cek" style="color: #428bca;">
+                DOWNLOAD PESERTA / CEK NILAI
+            </a>
+        </li>
+        <li>
+            <a href="" ng-click="uploadn=true;ubahpassword=false;downloadn=false;cekn=false;tutorialn=false" 
+            data-toggle="tooltip" data-placement="right" ng-model="pagesize"
+            title="Upload" style="color: #428bca;">
+                UPLOAD NILAI
+            </a>
+        </li>        
+		<li>
+            <a href="" ng-click="ubahpassword=true;downloadn=false;uploadn=false;cekn=false;tutorialn=false" data-toggle="tooltip" data-placement="right" title="Ubah Password" style="color: #428bca;">
+                UBAH PASSWORD
+            </a>
+        </li>
+		<li>
+            <a href="#" ng-click="logout()" data-toggle="tooltip" data-placement="right" title="Logout" style="color: #428bca;">
+                LOGOUT
+            </a>
+        </li>
+        </ul>
+	</div>
+	<!-- BAGIAN KIRI AKHIR -->
+
+	<!-- DATA DIRI DOSEN AWAL -->
+	<div class="col-md-9" style="padding-top:30px;">
+        <div class="col-md-5 col-md-offset-7" style="padding-top:30px;">
+            <table class="table table-hover panel panel-primary">
+            <thead class="panel-heading">
+            <tr ng-repeat="dos in user | limitTo:quantity" class="header-table panel-title">
+                <th>{{dos.name}}</th>
+                <th>{{dos.prodi}}</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="dos in user | limitTo:quantity">
+                    <td>{{dos.tahun}}</td>
+                    <td>{{dos.semester}}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        
+	<!-- DATA DIRI DOSEN AKHIR -->
+    
+    
+
+    <!-- KONTEN YANG BERUBAH-UBAH AWAL -->
+
+    <!-- TUTORIAL AWAL -->
+    <div class="row col-md-12" ng-show="tutorialn" ng-init="tutorialn=true" tutorial-directive>
+        
+    </div>
+    <!-- TUTORIAL AKHIR -->
+    
+    <!-- DOWNLOAD AWAL
+    <div class="row col-md-12" ng-show="downloadn" download-directive>
+        
+    </div>
+    DOWNLOAD AKHIR -->
+    
+    <!-- UPLOAD AWAL -->
+    <div class="row col-md-12" ng-show="uploadn" upload-directive>
+        
+    </div>
+    <!-- UPLOAD AKHIR -->
+        
+    <!-- CEK AWAL -->
+    <div class="row col-md-12" ng-show="cekn" cek-directive>
+        
+    </div>
+    <!-- CEK AKHIR -->
+        
+    <!-- UBAH PASSWORD AWAL -->
+    <div class="row col-md-12" ng-show="ubahpassword" style="margin-top:50px;" ubah-directive>
+        
+    </div>
+    <!-- UBAH PASSWORD AKHIR -->
+
+    <!-- KONTEN YANG BERUBAH-UBAH AKHIR -->
+</div>
+     </div>   
+<!-- FOOTER AWAL -->
+<div class="footer" style="bottom:0;margin-right:0;padding-left:30px;padding-bottom:15px;">
+    <h3>Administrasi Nilai</h3>
+    <h4>Universitas Muhammadiyah Surakarta - UMS</h4>
+    <h5>Jl. A. Yani Tromol Pos 1 Pabelan Kartasura Surakarta Jawa Tengah 57162 Indonesia</h5>
+    <h5>Telp. +62 271 717417 Faks. +62 271 715448</h5>
+    <h5>Email: ums@ums.ac.id</h5>
+    <h5>Website: <a href="http://www.ums.ac.id" style="font-color:white;" target="_blank">www.ums.ac.id</a></h5>
+    <p align="center">Universitas Muhammadiyah Surakarta &copy; 2016</p>
+</div>
+<!-- FOOTER AKHIR -->

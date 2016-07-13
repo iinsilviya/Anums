@@ -1,0 +1,30 @@
+<div class="col-md-6 col-md-offset-3 panel panel-primary">
+            <div class="row panel-heading">
+                <div class="panel-title" align="center">
+                    UBAH PASSWORD
+                </div>
+            </div>
+            <div class="panel-body">
+                <form name="myform" novalidate>
+                    <div style="margin-top: 15px" class="col-md-12 input-group">
+                    <div>Password Baru</div>
+                        <input type="password" name="passwordbaru" class="form-control" 
+                        ng-model="ps.passwordbaru" placeholder="Password Baru" required />
+                    </div>
+                    <div style="margin-top: 15px" class="col-md-12 input-group">
+                    <div>Password Lama</div>
+                        <input type="password" name="password" class="form-control" 
+                        ng-model="ps.password" placeholder="Password Lama" required />
+                    </div>
+                    <div style="margin-top: 15px" class="col-md-12 input-group">
+                    <div>Username</div>
+                        <input type="text" name="username" class="form-control" 
+                        ng-model="ps.username" placeholder="Username" required />
+                    </div>
+                    <div style="margin-top: 15px" class="col-md-12 input-group">
+                        <button type="submit" class="btn btn-primary" ng-disabled="myform.$invalid" ng-click="ubah(ps);">Ubah Password
+                        </button>
+                    </div>
+                </form>
+            </div>
+    </div>

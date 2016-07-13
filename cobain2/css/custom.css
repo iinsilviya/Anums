@@ -1,0 +1,43 @@
+.error{
+	color: #FF9494;
+}
+.success{
+    color: green;
+}
+.page-header{
+    background-color: #000080;
+    margin-top: 0px;
+    min-height: 50px;
+    padding-top: 10px;
+    color: white;
+    font-family: 'calibri';
+}
+.header-table{
+	background-color: #000080;
+}
+.footer{
+    background-color: #000080;
+    margin-top: 100px;
+    min-height: 50px;
+    padding-top: 10px;
+    color: white;
+    margin-bottom: 0px;
+}
+.footer > h5{
+	color: lightblue;
+}
+.footer > h5 > a{
+	color: white;
+}
+.footer > h5 > a:hover{
+	color: blue;
+}
+.container{
+	margin-top: 0;
+	background-color: white;
+}
+.body{
+    background-image: url("../image/bd.jpg");
+    background-size: 100%;
+    background-repeat: repeat-y;
+}

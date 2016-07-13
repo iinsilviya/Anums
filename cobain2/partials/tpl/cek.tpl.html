@@ -1,0 +1,95 @@
+<div class="col-lg-4 col-lg-offset-4" align="center">
+            <h4 style="margin-left:15px;"><strong>CEK NILAI KULIAH</strong></h4>
+            <div ng-repeat="sem in user | limitTo:quantity" style="margin-left:15px;">
+                <h5>Semester {{sem.semester}} Tahun {{sem.tahun}}</h5>
+            </div>
+        </div>
+<table class="table table-hover panel panel-primary" style="margin-left:15px;">
+            <thead class="panel-heading">
+            <tr class="header-table panel-title">
+                <th>No</th>
+                <th>Kode</th>
+                <th>Mata Kuliah</th>
+                <th>Kelas</th>
+                <th>Download Peserta</th>
+                <th>Cetak Nilai</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="d in daftar | orderBy:'semester' track by $index">
+                    <td align="center">{{$index+1}}</td>
+                    <td ng-model="d.kode_mk">{{d.kode_mk}}</td>
+                    <td>{{d.nama_mk}}</td>
+                    <td align="center" ng-model="d.kelas">{{d.kelas}}</td>
+                    <td align="center">
+                        
+                <a href="" onClick ="$('#tabnilai').tableExport({type:'excel',escape:'false'});">
+                            <button type="button" class="btn btn-primary">
+                                Download
+                            </button>
+                        </a>
+            
+                    </td>
+                    <td align="center">
+                        
+                <a href="" onClick ="$('#tabnilai').tableExport({type:'pdf',escape:'false'});">
+                            <button type="button" class="btn btn-primary">
+                                Cetak
+                            </button>
+                        </a>
+            
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--<a href="" onClick ="$('#tabnilai').tableExport({type:'json',escape:'false'});"> <img src='image/icons/json.png' width='24px'> JSON</a>
+        <a href="" onClick ="$('#tabnilai').tableExport({type:'json',escape:'false',ignoreColumn:'[2,3]'});"> <img src='image/icons/json.png' width='24px'> JSON (ignoreColumn)</a>
+        <a href="" onClick ="$('#tabnilai').tableExport({type:'json',escape:'true'});"> <img src='image/icons/json.png' width='24px'> JSON (with Escape)</a>
+        <a href="" onClick ="$('#tabnilai').tableExport({type:'xml',escape:'false'});"> <img src='image/icons/xml.png' width='24px'> XML</a>
+        <a href="" onClick ="$('#tabnilai').tableExport({type:'excel',escape:'false'});"> <img src='image/icons/xls.png' width='24px'> XLS</a>
+        <a href="" onClick ="$('#tabnilai').tableExport({type:'pdf',escape:'false'});"> <img src='image/icons/pdf.png' width='24px'> PDF</a>-->
+   
+
+            <table id="tabnilai" class="table table-hover panel panel-primary" style="margin-left:15px;">
+            <thead class="panel-heading">
+            <tr class="header-table panel-title">
+                <th>No</th>
+                <th>Kode MK</th>
+                <th>Kelas</th>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Presensi</th>
+                <th>Tugas 1</th>
+                <th>Tugas 2</th>
+                <th>Tugas 3</th>
+                <th>Tugas 4</th>
+                <th>Tugas 5</th>
+                <th>UTS</th>
+                <th>UAS</th>
+                <th>Total</th>
+                <th>Huruf</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="n in nilai">
+                    <td align="center">{{$index+1}}</td>
+                    <td>{{n.kode_mk}}</td>
+                    <td>{{n.kelas}}</td>
+                    <td>{{n.NIM}}</td>
+                    <td>{{n.nama_mhs}}</td>
+                    <td>{{n.nilai1}}</td>
+                    <td>{{n.nilai2}}</td>
+                    <td>{{n.nilai3}}</td>
+                    <td>{{n.nilai4}}</td>
+                    <td>{{n.nilai5}}</td>
+                    <td>{{n.nilai6}}</td>
+                    <td>{{n.nilai7}}</td>
+                    <td>{{n.nilai8}}</td>
+                    <td>{{n.total}}</td>
+                    <td>{{n.huruf}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="col-md-1 col-md-offset-11">
+    </div>
